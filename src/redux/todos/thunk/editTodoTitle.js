@@ -12,7 +12,7 @@ export const editTodoTile = (todoId, titleText) => {
                 "Content-type": "application/json; charset=UTF-8",
             },
         });
-        const updatedTodosResponse = await fetch(`http://localhost:9000/todos`)
+        const updatedTodosResponse = await fetch(`https://anam-todoassignment.herokuapp.com/api/todos`)
         const todos = await updatedTodosResponse.json();
 
         dispatch(loaded(todos));
