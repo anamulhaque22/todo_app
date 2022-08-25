@@ -3,7 +3,7 @@ import { loaded } from "../actions";
 export const editTodoTile = (todoId, titleText) => {
     console.log(todoId, titleText);
     return async (dispatch) => {
-        await fetch(`http://localhost:9000/todos/${todoId}`, {
+        await fetch(`https://anam-todoassignment.herokuapp.com/api/todos/${todoId}`, {
             method: "PATCH",
             body: JSON.stringify({
                 text: titleText,
